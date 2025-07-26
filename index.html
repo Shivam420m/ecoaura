@@ -7,11 +7,6 @@
   <title>EcoAura</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-  <style>
-    body{
-      background-image: url(pics/bg\ .png);
-    }
-  </style>
 </head>
 
 <body>
@@ -23,14 +18,52 @@
       <a href="#">your order</a>
       <a href="#">cart</a>
       <a href="#">wishlist</a>
+      <a href="about us.html" class="bottom-link">ABOUT US</a>
+      <div class="social-icons">
+        <!--facebook-->
+        <a href="https://facebook.com/yourprofile" target="_blank">
+          <img src="pics/facebook-logo.png" alt="Facebook" class="social-icon" height="25vw" width="25vw">
+        </a>
+        <!-- X -->
+        <a href="https://twitter.com/yourprofile" target="_blank">
+          <img src="pics/x-logo.jpg" alt="Twitter" class="social-icon" height="25vw" width="25vw">
+        </a>
+        <!-- insta -->
+        <a href="https://instagram.com/yourprofile" target="_blank">
+          <img src="pics/instagram-logo.jpg" alt="Instagram" class="social-icon" height="25vw" width="25vw">
+        </a>
+        <!-- mail  -->
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+          <img src="pics/g.jpg" alt="LinkedIn" class="social-icon" height="25vw" width="25vw">
+        </a>
+      </div>
     </div>
-    <img src="pics/ecoaura.jpg" alt="" width="240" height="40">
+    <img src="pics/ecoaura2.png" alt="" width="240" height="40">
 
 
     <div class="search-box">
-      <input type="search" placeholder="Search...">
+      <input id="searchbar" type="search" placeholder="Search...">
       <button type="submit">Go</button>
     </div>
+
+   <!-- Button to open the login popup -->
+  <button class="login" onclick="openForm()" style="margin:30px 0 0 30px; padding:10px 24px;">Login</button>
+
+  <!-- Modal overlay -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeForm()"></div>
+  
+  <!-- Popup Form Container -->
+  <div class="form-popup" id="loginForm">
+    <form class="form-container" onsubmit="event.preventDefault(); alert('Logged in!'); closeForm();">
+      <h2>Login</h2>
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
   </nav>
   <!-- navbar for option -->
   <nav class="navoptions">
@@ -47,13 +80,13 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="pics/ecoaura.jpg" class="d-block w-100" alt="img1">
+          <img src="pics/ecoaura2.png" class="d-block w-100" alt="img1" style="max-height: 300px;">
         </div>
         <div class="carousel-item">
-          <img src="#" class="d-block w-100" alt="img2">
+          <img src="pics/ecoaura.jpg" class="d-block w-100" alt="img2" style="max-height: 300px;">
         </div>
         <div class="carousel-item">
-          <img src="#" class="d-block w-100" alt="img3">
+          <img src="pics/ecoaura3.jpg" class="d-block w-100" alt="img3" style="max-height: 300px;">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -66,6 +99,7 @@
       </button>
     </div>
   </div>
+
   <!-- horizontal scroll bar -->
   <div class="scroll-container">
     <div class="item">Item 1</div>
@@ -97,7 +131,21 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Badge</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 70vw;" style="padding-top: 5px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="pics/bg e.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">braclet</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
             content. This content is a little bit longer.</p>
         </div>
@@ -118,21 +166,50 @@
       </div>
     </div>
   </div>
-    <div class="card mb-3" style="max-width: 70vw;" style="padding-top: 5px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="pics/bg e.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-          </div>
+  <div class="card mb-3" style="max-width: 70vw;" style="padding-top: 5px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="pics/bg e.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">EYE LOF 2.O</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
         </div>
       </div>
     </div>
-    <!-- java from bootstrap  -->
+  </div>
+  <div class="card mb-3" style="max-width: 70vw;" style="padding-top: 5px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="pics/bg e.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">TOTE SPECIAL</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 70vw;" style="padding-top: 5px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="pics/bg e.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Blue Bag</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- java from bootstrap  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <!-- my java  -->
   <script src="index.js"></script>
